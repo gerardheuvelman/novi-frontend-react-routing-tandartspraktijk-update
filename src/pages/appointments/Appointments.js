@@ -2,6 +2,7 @@ import React from 'react';
 import afspraak from '../../assets/dentist.svg';
 import Header from '../../components/header/Header';
 import './Appointments.css';
+import { Link } from 'react-router-dom';
 
 function Appointments() {
   return (
@@ -20,7 +21,7 @@ function Appointments() {
         Autem cum delectus deserunt exercitationem, fugiat illum iste iusto natus nobis nostrum perferendis provident qui quos recusandae sapiente tempora
         tempore unde, voluptas. Ab, deserunt est fugiat fugit ipsam saepe sint ullam?
       </p>
-      <p>Leer hier meer over gaatjes.</p>
+      <p>Leer <Link to="/gaatjes">hier</Link> meer over gaatjes.</p>
     </main>
   );
 }

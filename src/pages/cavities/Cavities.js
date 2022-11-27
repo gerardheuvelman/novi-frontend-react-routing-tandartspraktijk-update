@@ -2,8 +2,18 @@ import React from 'react';
 import Header from '../../components/header/Header';
 import gaatjes from '../../assets/dentist.svg';
 import './Cavities.css';
+import { useNavigate } from "react-router-dom";
 
 function Cavities() {
+
+    const navigate = useNavigate(); // We roepen de hook eenmalig aan;
+
+    function onButtonClick(e) {
+        e.preventDefault();
+        console.log("We gaan direct door naar de afspraken pagina!");
+        navigate("/afspraken"); // <--- We kunnen navigate-methode oneindig vaak gebruiken!
+    }
+
   return (
     <main className="page-container">
       <Header icon={gaatjes} title="Gaatjes" />
@@ -12,7 +22,7 @@ function Cavities() {
         Amet consequuntur deleniti distinctio ea eveniet id, labore magni neque obcaecati praesentium quibusdam quidem, quod, repellat sequi ut.
         Blanditiis, reiciendis.
       </p>
-      <button type="button" className="appointment-button">
+      <button type="button" className="appointment-button" onClick={onButtonClick}>
         Maak direct uw afspraak!
       </button>
       <p className="content-container-col3">
