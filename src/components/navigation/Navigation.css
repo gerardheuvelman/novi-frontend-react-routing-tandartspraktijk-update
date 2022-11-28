@@ -36,5 +36,5 @@ ul {
 }
 
 .default-menu-link {
-    border-bottom: none;
+    border-bottom: 1px solid transparent;
 }
