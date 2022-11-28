@@ -7,6 +7,7 @@ import Cavities from './pages/cavities/Cavities';
 import Navigation from './components/navigation/Navigation';
 import {Routes, Route, Navigate} from 'react-router-dom';
 import NotFound from "./pages/notFound/NotFound";
+import ProductPage from "./pages/appointments/productpage/ProductPage";
 
 function App() {
 
@@ -21,6 +22,9 @@ function App() {
           <Route path="/tanden-bleken" element={isLoggedIn === true ? <Whitening /> : <Navigate to="/"/>}/>
           <Route path="/afspraken" element={isLoggedIn === true ? <Appointments /> : <Navigate to="/"/>}/>
           <Route path="/gaatjes" element={isLoggedIn === true ? <Cavities /> : <Navigate to="/"/>}/>
+
+          <Route path="/product/:id" element={isLoggedIn === true ? <ProductPage /> : <Navigate to="/"/>} />
+
           <Route path="*" element={<NotFound/>}/>
       </Routes>
     </>
